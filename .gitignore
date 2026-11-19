@@ -1,0 +1,39 @@
+# Operating system
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+## opinionated
+.dump/
+*tmp.*
+
+# Build outputs
+build/
+dist/
+out/
+
+# Test / coverage outputs
+coverage/
+
+# Personal
+archive/
+notes/
