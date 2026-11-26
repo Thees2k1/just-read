@@ -55,4 +55,6 @@ Whenever you need to inspect the active machine's Android toolchain (SDK locatio
 - `app/src/test/` — JVM unit tests mirroring `com.justread.app` packages
 - `app/src/androidTest/` — Compose UI instrumented tests
 - `notes/` — Architecture notes, specs, and environment setup guides
+  - `notes/shared/` — Shared templates and per-device Test Environment Specs (`test-env-specs/TES-XX <Name>.md`)
+- `website/src/content/docs/` — Public-facing Astro documentation site
 - `archive/BookReaderApp/` — Legacy UWP C#/XAML reference implementation (read-only reference)

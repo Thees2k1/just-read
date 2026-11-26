@@ -17,6 +17,9 @@ Desktop.ini
 !.env.example
 *.pem
 *.key
+*.jks
+*.keystore
+keystore.properties
 
 # Temporary files
 *.tmp
@@ -36,8 +39,12 @@ coverage/
 
 # Personal
 archive/
-notes/
+notes/*
+!notes/shared/
 .script/
+# Obsidian session state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 
 # Website (Astro Starlight)
 website/node_modules/

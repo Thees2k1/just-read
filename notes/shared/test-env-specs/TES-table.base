@@ -1,0 +1,20 @@
+filters:
+  and:
+    - file.hasTag("tes")
+views:
+  - type: table
+    name: Active Test Devices
+    filters:
+      and:
+        - status == "active"
+    order:
+      - id
+      - device
+      - type
+      - os
+      - api
+      - form_factor
+      - page_size_kb
+      - abi
+      - focus
+      - updated
