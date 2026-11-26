@@ -37,3 +37,15 @@ coverage/
 # Personal
 archive/
 notes/
+.script/
+
+# Android
+*.iml
+.gradle
+/local.properties
+local.properties
+/captures
+.externalNativeBuild
+.cxx
+
+.script/

@@ -1,0 +1,229 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 12 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 14 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 16 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 17 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 18 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 19 0 R >>
+endobj
+12 0 obj
+<< /Length 386 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Just Read - Quick Start Guide) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 1 of 8 - Welcome) Tj
+/F1 12 Tf
+0 -42 Td
+(Welcome to Just Read, a native Android PDF reader built with Jetpack Compose.) Tj
+0 -24 Td
+(This sample document is license-free and generated locally for testing.) Tj
+0 -24 Td
+(Scroll down smoothly to experience the sliding-window page renderer.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+13 0 obj
+<< /Length 376 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 1: Infinite Scroll) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 2 of 8 - Windowing) Tj
+/F1 12 Tf
+0 -42 Td
+(Pages are rendered on demand into a sliding window around your viewport.) Tj
+0 -24 Td
+(Active page, 1 page behind, and 2 pages ahead stay warm in memory.) Tj
+0 -24 Td
+(Pages outside that window are evicted automatically to keep RAM flat.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+14 0 obj
+<< /Length 369 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 2: Concurrency & Mutex) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 3 of 8 - Thread Safety) Tj
+/F1 12 Tf
+0 -42 Td
+(Android PdfRenderer allows only one open page at a time.) Tj
+0 -24 Td
+(A Kotlin Mutex serializes rendering and books.json persistence safely.) Tj
+0 -24 Td
+(Rapid scroll updates cancel stale render passes via collectLatest.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+15 0 obj
+<< /Length 396 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 3: Dragonite Palette) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 4 of 8 - Material 3 Expressive) Tj
+/F1 12 Tf
+0 -42 Td
+(The app adapts Dragonite Amber \(#F1B46D\), Cream \(#F8EED3\), and Teal \(#31AE9D\).) Tj
+0 -24 Td
+(Try switching between Cream, Sepia, and Dark themes in Settings.) Tj
+0 -24 Td
+(Tap the center of any page to toggle full immersive reading mode.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+16 0 obj
+<< /Length 368 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 4: Dual Zoom) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 5 of 8 - Slider & Pinch) Tj
+/F1 12 Tf
+0 -42 Td
+(Use the Settings Zoom slider \(50% to 200%\) for exact magnification.) Tj
+0 -24 Td
+(Or pinch directly on the reading viewport to zoom naturally.) Tj
+0 -24 Td
+(Pan horizontally while zoomed in without fighting vertical page scroll.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+17 0 obj
+<< /Length 352 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 5: Bookmarks & Outline) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 6 of 8 - Navigation) Tj
+/F1 12 Tf
+0 -42 Td
+(Tap the bookmark icon in the floating top bar to save any page.) Tj
+0 -24 Td
+(Open the Table of Contents pill button to switch Chapters or Bookmarks.) Tj
+0 -24 Td
+(Tap any entry to jump straight to that page.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+18 0 obj
+<< /Length 368 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 6: Your Own Library) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 7 of 8 - Importing PDFs) Tj
+/F1 12 Tf
+0 -42 Td
+(Return to My Library and tap + to import any PDF from your device.) Tj
+0 -24 Td
+(Selected PDFs are copied into app-private storage so permissions persist.) Tj
+0 -24 Td
+(Reading progress is saved automatically as you scroll.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+19 0 obj
+<< /Length 344 >>
+stream
+BT
+/F1 22 Tf
+56 710 Td
+(Chapter 7: End of Sample) Tj
+/F1 13 Tf
+0 -32 Td
+(Page 8 of 8 - Happy Reading) Tj
+/F1 12 Tf
+0 -42 Td
+(You reached the end of the Just Read Quick Start Guide.) Tj
+0 -24 Td
+(Swipe back up to test reverse window preloading.) Tj
+0 -24 Td
+(Next milestones: Room full-text search, accessibility, and cloud sync.) Tj
+0 -24 Td
+ET
+endstream
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000159 00000 n 
+0000000229 00000 n 
+0000000356 00000 n 
+0000000483 00000 n 
+0000000610 00000 n 
+0000000737 00000 n 
+0000000864 00000 n 
+0000000991 00000 n 
+0000001119 00000 n 
+0000001247 00000 n 
+0000001685 00000 n 
+0000002113 00000 n 
+0000002534 00000 n 
+0000002982 00000 n 
+0000003402 00000 n 
+0000003806 00000 n 
+0000004226 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+4622
+%%EOF
