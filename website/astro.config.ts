@@ -7,6 +7,7 @@ export default defineConfig({
     starlight({
       title: 'Just Read',
       description: 'Official documentation and privacy compliance site for Just Read on Android.',
+      customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
           label: 'Legal & Privacy',
