@@ -39,6 +39,14 @@ archive/
 notes/
 .script/
 
+# Website (Astro Starlight)
+website/node_modules/
+website/.astro/
+website/dist/
+
+# Firebase
+.firebase/
+
 # Android
 *.iml
 .gradle
