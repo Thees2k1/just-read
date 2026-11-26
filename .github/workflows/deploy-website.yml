@@ -1,0 +1,33 @@
+name: Deploy Website to Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - 'firebase.json'
+      - '.github/workflows/deploy-website.yml'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+          cache-dependency-path: website/pnpm-lock.yaml
+      - name: Install and Build
+        working-directory: ./website
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm run build
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          channelId: live
+          projectId: portfolio-nguyenthe
