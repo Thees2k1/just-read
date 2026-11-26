@@ -7,6 +7,19 @@ export default defineConfig({
     starlight({
       title: 'Just Read',
       description: 'Official documentation and privacy compliance site for Just Read on Android.',
+      sidebar: [
+        {
+          label: 'Legal & Privacy',
+          items: [
+            { label: 'Privacy Policy', slug: 'privacy' },
+            { label: 'Account & Data Deletion', slug: 'delete-account' },
+          ],
+        },
+        {
+          label: 'Guides',
+          items: [{ autogenerate: { directory: 'guides' } }],
+        },
+      ],
     }),
   ],
 });
