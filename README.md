@@ -17,6 +17,28 @@
 
 ---
 
+## Preview
+
+Captured on **Pixel Fold (Android 17, Unfolded `2208×1840`)** running the signed `v0.1.0-alpha.1` release build *(dedicated multi-pane tablet/foldable layout planned next)*:
+
+| Library | Reader Cover | Infinite Scroll & Dragonite Theme |
+| :---: | :---: | :---: |
+| ![Just Read Library](./website/public/screenshots/fold-library.png) | ![Just Read Reader Cover](./website/public/screenshots/fold-reader.png) | ![Just Read Reader Page 2](./website/public/screenshots/fold-reader-p2.png) |
+
+---
+
+## Release Benchmarks (`v0.1.0-alpha.1`)
+
+Measured on a physical **Samsung Galaxy A34 (`SM-A346E`, Android 14/15, 120Hz)** running the signed, R8-minified release build:
+
+| Metric | Measured Value | Notes |
+| :--- | :--- | :--- |
+| **Signed Release APK Size** | **1.55 MB** | `isMinifyEnabled = true`, `isShrinkResources = true` (includes 8-page sample PDF) |
+| **Cold Start (`TotalTime`)** | **484 – 639 ms** | Measured via `adb shell am start -W` |
+| **Idle Memory (`TOTAL PSS`)** | **~31.3 MB** | Java Heap `2.7 MB` · Native Heap `10.2 MB` · Graphics `2.8 MB` |
+
+---
+
 ## Tech Stack & Version Stack
 
 | Component | Version / Value |
@@ -50,19 +72,8 @@ just-read/
 
 ---
 
-## Documentation
-
-- [Development Specs & Roadmap](./notes/roadmap-and-specs.md)
-- [Fastest Demo Deployment Scheme](./notes/how/the-fastest-deployment-scheme.md)
-- [Shell & CLI Learning Verdict](./notes/why/prequesite-shell-script-knowledge.md)
-
----
-
 ## Getting Started
 
-1. **Check your local Android environment:**
-   ```powershell
-   .\.script\android-doctor.ps1
    ```
 2. **Build the debug APK:**
    ```powershell

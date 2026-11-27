@@ -20,6 +20,25 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+## Preview
+
+Captured on **Pixel Fold (Android 17, Unfolded `2208×1840`)** running the signed `v0.1.0-alpha.1` release APK. *(Verified across Compact phone and Expanded foldable form factors; dedicated multi-pane large-screen layout planned next.)*
+
+<div class="screenshot-grid">
+  <figure class="screenshot-card">
+    <img src="/screenshots/fold-library.png" alt="Just Read Library screen on Pixel Fold" loading="lazy" />
+    <figcaption>Library &amp; Quick Guide Card</figcaption>
+  </figure>
+  <figure class="screenshot-card">
+    <img src="/screenshots/fold-reader.png" alt="Just Read Reader cover page on Pixel Fold" loading="lazy" />
+    <figcaption>Reader Cover &amp; Floating Controls</figcaption>
+  </figure>
+  <figure class="screenshot-card">
+    <img src="/screenshots/fold-reader-p2.png" alt="Just Read Reader content page on Pixel Fold" loading="lazy" />
+    <figcaption>Infinite Vertical Scroll &amp; Dragonite Theme</figcaption>
+  </figure>
+</div>
+
 ## Core Features
 
 <CardGrid>
@@ -33,3 +52,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     Your documents stay on your device. No account or internet connection required for local reading.
   </Card>
 </CardGrid>
+
+## Release Benchmarks (`v0.1.0-alpha.1`)
+
+Measured on a physical **Samsung Galaxy A34 (120Hz)** running the signed, R8-minified release APK:
+
+| Metric | Value | Notes |
+| :--- | :--- | :--- |
+| **APK Size** | **1.55 MB** | R8-minified & resource-shrunk (includes 8-page Quick Guide PDF) |
+| **Cold Start** | **484 – 639 ms** | `adb shell am start -W` cold launch to first frame |
+| **Idle Memory (PSS)** | **~31.3 MB** | Lean baseline before PDF bitmap streaming |
