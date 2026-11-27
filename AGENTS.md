@@ -9,11 +9,11 @@ Always use the Gradle wrapper (`./gradlew` on Linux/macOS, `.\gradlew.bat` on Wi
 | Layer | Version / Setting | Source / Notes |
 | :--- | :--- | :--- |
 | **Application ID / Namespace** | `com.justread.app` | `app/build.gradle.kts` |
-| **Gradle Wrapper** | `9.3.1-bin` | `gradle/wrapper/gradle-wrapper.properties` |
-| **Android Gradle Plugin (AGP)** | `9.1.0` | `gradle/libs.versions.toml` |
+| **Gradle Wrapper** | `9.4.1-bin` | `gradle/wrapper/gradle-wrapper.properties` |
+| **Android Gradle Plugin (AGP)** | `9.2.1` | `gradle/libs.versions.toml` |
 | **Kotlin (KGP)** | `2.3.20` | `gradle/libs.versions.toml` |
 | **Jetpack Compose BOM** | `2026.11.01` | `gradle/libs.versions.toml` |
-| **SDK Targets** | `minSdk = 24`, `compileSdk = 37.0`, `targetSdk = 37` | `app/build.gradle.kts` |
+| **SDK Targets** | `minSdk = 24`, `compileSdk = 37.1`, `targetSdk = 37` | `app/build.gradle.kts` |
 | **JVM Toolchain** | `17` (`jvmToolchain(17)`) | `app/build.gradle.kts` |
 
 ## Discovering the Local Environment

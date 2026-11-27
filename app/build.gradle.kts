@@ -1,27 +1,34 @@
-import java.util.Properties
-
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
 }
 
-val keystoreProperties = Properties().apply {
+val keystoreProperties: Map<String, String> = run {
   val propsFile = rootProject.file("keystore.properties")
-  if (propsFile.exists()) {
-    propsFile.inputStream().use { load(it) }
+  if (!propsFile.exists()) {
+    emptyMap()
+  } else {
+    propsFile.readLines(Charsets.UTF_8)
+      .asSequence()
+      .map { it.removePrefix("\uFEFF") }
+      .filter { it.isNotBlank() && !it.trimStart().startsWith("#") && '=' in it }
+      .associate { line ->
+        val idx = line.indexOf('=')
+        line.substring(0, idx).trim() to line.substring(idx + 1)
+      }
   }
 }
 
 fun signingProp(envName: String, propName: String): String? =
   System.getenv(envName)?.takeIf { it.isNotBlank() }
-    ?: keystoreProperties.getProperty(propName)?.takeIf { it.isNotBlank() }
+    ?: keystoreProperties[propName]?.takeIf { it.isNotBlank() }
 
 android {
   namespace = "com.justread.app"
   compileSdk {
     version = release(37) {
-      minorApiLevel = 0
+      minorApiLevel = 1
     }
   }
   defaultConfig {

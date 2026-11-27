@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Clean single-color open book + bookmark silhouette for Material You / One UI themed icons -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M31.5,36.5 Q42.5,35 53.2,40.5 L53.2,71 Q42.5,66.2 31.5,68.2 C30.4,68.4 29.5,67.6 29.5,66.5 L29.5,38.5 C29.5,37.4 30.4,36.6 31.5,36.5 Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M76.5,36.5 Q65.5,35 54.8,40.5 L54.8,71 Q65.5,66.2 76.5,68.2 C77.6,68.4 78.5,67.6 78.5,66.5 L78.5,38.5 C78.5,37.4 77.6,36.6 76.5,36.5 Z" />
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M62,31.5 C62,30.7 62.7,30 63.5,30 L69,30 C69.8,30 70.5,30.7 70.5,31.5 L70.5,35.2 L62,35.2 Z" />
+    <path
+        android:pathData="M27,42 L27,72 C27,73.5 28.2,74.5 29.5,74.5 L49,74.5 C51.5,74.5 52.8,76 54,76 C55.2,76 56.5,74.5 59,74.5 L78.5,74.5 C79.8,74.5 81,73.5 81,72 L81,42"
+        android:strokeWidth="2.4"
+        android:strokeColor="#FF000000"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

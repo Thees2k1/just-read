@@ -22,9 +22,9 @@
 | **Application ID / Namespace** | `com.justread.app` |
 | **Language & KGP** | Kotlin `2.3.20` (Coroutines, Flow) |
 | **UI** | Jetpack Compose (BOM `2026.11.01`), Material 3 |
-| **Android Gradle Plugin (AGP)** | `9.1.0` |
-| **Gradle Wrapper** | `9.3.1-bin` |
-| **Android SDK Targets** | `minSdk 24` \| `compileSdk 37` (`37.0`) \| `targetSdk 37` |
+| **Android Gradle Plugin (AGP)** | `9.2.1` |
+| **Gradle Wrapper** | `9.4.1-bin` |
+| **Android SDK Targets** | `minSdk 24` \| `compileSdk 37` (`37.1`) \| `targetSdk 37` |
 | **JVM Toolchain** | Java `17` (`jvmToolchain(17)`) |
 | **Host JDK** | OpenJDK `25.0.3` (Android Studio JBR) |
 | **Android Studio** | `2026.2.1` (Canary `2026.2.3`) |
