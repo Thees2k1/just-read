@@ -1,8 +1,21 @@
+import java.util.Properties
+
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
 }
+
+val keystoreProperties = Properties().apply {
+  val propsFile = rootProject.file("keystore.properties")
+  if (propsFile.exists()) {
+    propsFile.inputStream().use { load(it) }
+  }
+}
+
+fun signingProp(envName: String, propName: String): String? =
+  System.getenv(envName)?.takeIf { it.isNotBlank() }
+    ?: keystoreProperties.getProperty(propName)?.takeIf { it.isNotBlank() }
 
 android {
   namespace = "com.justread.app"
@@ -15,14 +28,43 @@ android {
     applicationId = "com.justread.app"
     minSdk = 24
     targetSdk = 37
-    versionCode = 1
-    versionName = "1.0"
+    versionCode = (project.findProperty("VERSION_CODE") as String?)?.toIntOrNull()
+      ?: System.getenv("VERSION_CODE")?.toIntOrNull()
+      ?: 1
+    versionName = (project.findProperty("VERSION_NAME") as String?)?.takeIf { it.isNotBlank() }
+      ?: System.getenv("VERSION_NAME")?.takeIf { it.isNotBlank() }
+      ?: "1.0"
+  }
+
+  val releaseStoreFilePath = signingProp("RELEASE_STORE_FILE", "storeFile")
+  val releaseStorePassword = signingProp("RELEASE_STORE_PASSWORD", "storePassword")
+  val releaseKeyAlias = signingProp("RELEASE_KEY_ALIAS", "keyAlias")
+  val releaseKeyPassword = signingProp("RELEASE_KEY_PASSWORD", "keyPassword")
+  val hasReleaseSigning =
+    releaseStoreFilePath != null &&
+      releaseStorePassword != null &&
+      releaseKeyAlias != null &&
+      releaseKeyPassword != null
+
+  signingConfigs {
+    if (hasReleaseSigning) {
+      create("release") {
+        storeFile = rootProject.file(releaseStoreFilePath)
+        storePassword = releaseStorePassword
+        keyAlias = releaseKeyAlias
+        keyPassword = releaseKeyPassword
+      }
+    }
   }
 
   buildTypes {
     release {
-      isMinifyEnabled = false
+      isMinifyEnabled = true
+      isShrinkResources = true
       proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+      if (hasReleaseSigning) {
+        signingConfig = signingConfigs.getByName("release")
+      }
     }
     create("profile") {
       initWith(getByName("release"))
