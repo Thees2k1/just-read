@@ -2,6 +2,8 @@
 
 > A native Android PDF reading application ported from the original UWP [BookReaderApp](./archive/BookReaderApp/).
 
+**[Download APK (v0.1.0-alpha.1)](https://github.com/Thees2k1/just-read/releases/download/v0.1.0-alpha.1/just-read.apk)** · **[All GitHub Releases](https://github.com/Thees2k1/just-read/releases)**
+
 ---
 
 ## Overview
